@@ -1,0 +1,14 @@
+{
+  "theme": "auto",
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://openrouter.ai/api",
+    "ANTHROPIC_API_KEY": "",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "meta-llama/llama-3.3-70b-instruct:free",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "openai/gpt-oss-20b:free",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "qwen/qwen3-next-80b-a3b-instruct:free",
+    "CLAUDE_CODE_SUBAGENT_MODEL": "deepseek/deepseek-v4-flash:free",
+    "ENABLE_TOOL_SEARCH": "false"
+  },
+  "model": "openrouter/free",
+  "effortLevel": "high"
+}

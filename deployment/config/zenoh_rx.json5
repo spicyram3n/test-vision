@@ -1,0 +1,16 @@
+{
+  mode: "peer",
+  connect: {
+    endpoints: ["tcp/10.151.125.2:7447"],
+  },
+  scouting: {
+    multicast: {
+      enabled: false,
+    },
+  },
+  transport: {
+    shared_memory: {
+      enabled: false,
+    },
+  },
+}

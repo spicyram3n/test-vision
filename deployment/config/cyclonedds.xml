@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CycloneDDS xmlns="https://cdds.io/config">
+  <Domain id="any">
+
+    <General>
+      <Interfaces>
+        <NetworkInterface
+            name="enp0s31f6"
+            autodetermine="false"
+            multicast="false"/>
+      </Interfaces>
+
+      <AllowMulticast>false</AllowMulticast>
+      <EnableMulticastLoopback>false</EnableMulticastLoopback>
+
+      <FragmentSize>8000B</FragmentSize>
+      <MaxMessageSize>8500B</MaxMessageSize>
+      <MaxRexmitMessageSize>8500B</MaxRexmitMessageSize>
+    </General>
+
+    <Discovery>
+      <ParticipantIndex>auto</ParticipantIndex>
+      <MaxAutoParticipantIndex>99</MaxAutoParticipantIndex>
+
+      <Peers>
+        <!-- <Peer Address="10.7.3.185"/>
+        <Peer Address="131.220.7.198"/> -->
+        <!-- <Peer Address="192.168.1.101"/> -->
+        <Peer Address="localhost"/>
+      </Peers>
+    </Discovery>
+
+    <Internal>
+
+      <SocketReceiveBufferSize min="32MB"/>
+  <SocketSendBufferSize min="32MB"/>
+<MaxSampleSize>100MB</MaxSampleSize>
+  <DefragReliableMaxSamples>64</DefragReliableMaxSamples>
+  <DefragUnreliableMaxSamples>64</DefragUnreliableMaxSamples>
+
+  <PrimaryReorderMaxSamples>1024</PrimaryReorderMaxSamples>
+  <DeliveryQueueMaxSamples>1024</DeliveryQueueMaxSamples>
+
+  <MaxQueuedRexmitBytes>64MB</MaxQueuedRexmitBytes>
+  <MaxQueuedRexmitMessages>1024</MaxQueuedRexmitMessages>
+
+  <Watermarks>
+    <WhcHigh>64MB</WhcHigh>
+  </Watermarks>
+  
+      <!-- <SocketReceiveBufferSize min="16MB"/>
+      <SocketSendBufferSize min="16MB"/>
+
+      <Watermarks>
+        <WhcHigh>32MB</WhcHigh>
+      </Watermarks> -->
+    </Internal>
+
+    <Tracing>
+      <Verbosity>config</Verbosity>
+      <OutputFile>/tmp/cdds.log.${CYCLONEDDS_PID}</OutputFile>
+    </Tracing>
+
+  </Domain>
+</CycloneDDS>
